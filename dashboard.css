@@ -1,0 +1,334 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e8f4f8;
+    color: #333;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+  
+  /* Dashboard Grid Layout */
+  .dashboard {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 20px;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box; /* Includes padding in width/height */
+  }
+  
+  /* Profile Section */
+  .profile-container {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 350px;
+    margin: auto; /* Centers it vertically in its column */
+  }
+  
+  .profile-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .profile-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+  }
+  
+  .profile-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 10px;
+  }
+  
+  /* Client Details */
+  .client-details h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #2c3e50;
+  }
+  
+  .client-details ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .client-details li {
+    margin-bottom: 10px;
+    color: #6c757d;
+  }
+  
+  .client-details li strong {
+    font-weight: bold;
+    color: #2c3e50;
+  }
+  
+  /* Logout Button */
+  .logout-section {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .logout-button {
+    background-color: #276488;
+    color: #ffffff;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .logout-button:hover {
+    background-color: #2b93c0;
+  }
+  
+  /* Right Section Layout */
+  .right-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: auto; /* Scrollable for long content */
+    padding: 10px;
+  }
+
+  .hours-activity-block {
+    background-color: #f0f4f8;
+    padding: 20px;
+    margin-top: 20px;
+  }
+
+  .hours-info {
+    font-size: 1.2em;
+  }
+
+  .chart {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  /* Activity Section */
+  /* .activity-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  } */
+  
+  /* .hours-activity, */
+  .calendar {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    flex: 1;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    min-width: 300px;
+  }
+  /* .hours-activity-block {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%; /* Ensure it fits the container 
+    height: 100%;
+  
+  
+  .hours-activity-block h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #333;
+    text-align: left;
+  }
+  
+  .hours-info {
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  
+  .hours-info p {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  .hours-info strong {
+    font-size: 18px;
+    color: #276488;
+  }
+  
+  .chart {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    height: 150px;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+  } */
+  
+  .bar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    width: 12%;
+  }
+  
+  .bar {
+    width: 15px;
+    background: #276488;
+    border-radius: 5px 5px 0 0;
+    transition: height 0.3s, background 0.3s;
+  }
+  
+  .bar:hover {
+    background: #238ebb;
+  }
+  
+  .bar.highlight {
+    background: #ffcc00;
+  }
+  
+  .label {
+    margin-top: 5px;
+    font-size: 12px;
+    color: #555;
+  }
+  
+  
+  /* Calendar */
+  .calendar-container {
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .calendar-header {
+    font-size: 22px;
+    font-weight: bold;
+    color: #7AB2D3; /* Matches color palette */
+    margin-bottom: 20px;
+  }
+  
+  .calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    text-align: center;
+  }
+  .calendar-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  /* Images */
+  .calendar-image {
+    width: 300px; /* Adjust width as needed */
+    height: auto;
+    object-fit: contain;
+  }
+  
+  .left-image {
+    margin-right: 20px;
+  }
+  
+  .right-image {
+    margin-left: 20px;
+  }
+  
+  .calendar-day {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .calendar-date {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .calendar-date:hover {
+    border-color: #59a1c7;
+  }
+  
+  .calendar-date.checked {
+    background-color: #7AB2D3;
+    color: #fff;
+    border-color: #59a1c7;
+  }
+  
+  .calendar-today {
+    border: 2px solid #7AB2D3;
+  }
+  
+  /* Yoga Section */
+  .yoga-section {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Carousel Section */
+  .carousel {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .carousel-items {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 10px;
+    flex: 1;
+  }
+  
+  .card {
+    background: #dfe7ed;
+    border-radius: 8px;
+    text-align: center;
+    padding: 15px;
+    flex: none;
+    width: 250px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .arrow {
+    background: #0a677a;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+  }

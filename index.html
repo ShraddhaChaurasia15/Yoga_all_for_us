@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8 />
+<meta name=viewport content="width=device-width, initial-scale=1.0" />
+<link href=https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css rel=stylesheet />
+<link rel=stylesheet href=styles.css />
+<script src=https://unpkg.com/scrollreveal></script>
+<title>Yoga: All for US</title>
+</head>
+<body>
+<nav>
+<div class=nav__logo>
+<img src=assets/logo.png alt=logo />
+<span>YOGA: ALL FOR US</span>
+</div>
+<ul class=nav__links>
+<li class=link><a href=library.html>Yoga Library</a></li>
+<li class=link><a href=#home>Home</a></li>
+<li class=link><a href=#contact>Contact</a></li>
+<li class=link><a href=signup.html>Sign Up</a></li>
+<li class=link><a href=login.html>Log In</a></li>
+</ul>
+</nav>
+<header id=home>
+<div class="section__container header__container">
+<div class=header__content>
+<h1>Effective YOGA</h1>
+<h2>Do yoga today for better tomorrow</h2>
+<a href=login.html>
+<button class=btn>Log In</button>
+</a>
+</div>
+<div class=header__image>
+<img src=assets/P18.jpg alt=header />
+</div>
+</div>
+</header>
+<section class="section__container why__container">
+<div class=why__image>
+<img src=assets/P17.jpg alt="why yoga" />
+</div>
+<div class=why__content>
+<h2 class=section__header>Why You Should Go To Yoga</h2>
+<p>
+Engaging in yoga offers a holistic approach to wellness, encompassing
+both physical and mental benefits. Through a series of poses,
+stretches, and muscle strength. Its meditative aspects encourage
+mindfulness, reducing stress and anxiety while promoting a sense of
+inner peace.
+</p>
+<ul>
+<li>
+<span><i class=ri-checkbox-circle-fill></i></span>
+Yoga boosts brain power
+</li>
+<li>
+<span><i class=ri-checkbox-circle-fill></i></span>
+Yoga helps you to breathe better
+</li>
+<li>
+<span><i class=ri-checkbox-circle-fill></i></span>
+Yoga improves your strength
+</li>
+<li>
+<span><i class=ri-checkbox-circle-fill></i></span>
+Yoga helps you to focus
+</li>
+<li>
+<span><i class=ri-checkbox-circle-fill></i></span>
+Yoga helps give meaning to your day
+</li>
+</ul>
+</div>
+</section>
+<section class="section__container photos__container">
+<p class=section__subheader>GALLERY</p>
+<div class=photos__grid>
+<div class=photos__card>
+<img src=assets/P10.jpg alt=photo />
+</div>
+<div class=photos__card>
+<img src=assets/P2.jpg alt=photo />
+</div>
+<div class=photos__card>
+<img src=assets/P5.jpg alt=photo />
+</div>
+<div class=photos__card>
+<img src=assets/P9.jpg alt=photo />
+</div>
+</div>
+</section>
+<section class="section__container planner__container">
+    <h2 class="section__header">Personal Yoga Planner</h2>
+
+    <select id="goalSelect">
+        <option value="">Select Your Goal</option>
+        <option value="weightloss">Weight Loss</option>
+        <option value="stress">Stress Relief</option>
+        <option value="sleep">Better Sleep</option>
+        <option value="flexibility">Flexibility</option>
+    </select>
+
+    <button class="btn" onclick="generatePlan()">
+        Generate Plan
+    </button>
+
+    <div id="planResult"></div>
+</section>
+<section class="section__container bmi__container">
+    <h2 class="section__header">BMI Calculator</h2>
+
+    <input type="number" id="height" placeholder="Height (cm)">
+    <input type="number" id="weight" placeholder="Weight (kg)">
+
+    <button class="btn" onclick="calculateBMI()">
+        Calculate BMI
+    </button>
+
+    <div id="bmiResult"></div>
+</section>
+<footer class=footer id=contact>
+<div class="section__container footer__container">
+<div class=footer__col>
+<div class=footer__logo><a href=#>Yoga | All for US</a></div>
+</div>
+<div class=footer__col>
+<p>Delhi, India</p>
+</div>
+<div class=footer__col>
+<div class=footer__socials>
+<a href=#><i class=ri-twitter-fill></i></a>
+<a href=#><i class=ri-facebook-fill></i></a>
+<a href=#><i class=ri-instagram-line></i></a>
+</div>
+</div>
+</div>
+<div class="section__container footer__bar">
+Copyright © 2024
+</div>
+</footer>
+<!-- Floating AI Assistant -->
+<div id="chat-toggle">
+    🤖
+</div>
+
+<div id="chat-container">
+    <div id="chat-header">
+        Yoga AI Coach
+    </div>
+
+    <div id="chat-messages">
+        <div class="bot-message">
+            Namaste 🙏 How can I help you today?
+        </div>
+    </div>
+
+    <div id="chat-input-area">
+        <input
+            type="text"
+            id="user-input"
+            placeholder="Ask about yoga..."
+        >
+        <button onclick="sendMessage()">Send</button>
+<button onclick="startVoice()">🎤</button>
+    </div>
+</div>
+<script src=main.js></script>
+</body>
+</html>

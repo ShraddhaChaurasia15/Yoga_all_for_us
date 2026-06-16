@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <script defer src="dashboard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="dashboard">
+        <div class="profile-container">
+            <!-- Profile Header -->
+            <div class="profile-header">
+                <img src="assets\pro.jpg" alt="Profile Picture" class="profile-picture">
+                <h1 class="profile-name">Dianne Russell</h1>
+            </div>
+
+            <!-- Client Details -->
+            <div class="client-details">
+                <h3>Client details</h3>
+                <ul>
+                    <li><strong>Email:</strong> d.russell@gmail.com</li>
+                    <li><strong>Phone number:</strong> (229) 555-0109</li>
+                    <li><strong>Date of birth:</strong> 12/03/1987</li>
+                    <li><strong>Home address:</strong> 6301 Elgin St. Celina, Delaware, 10299</li>
+                    <li><strong>Insurance:</strong> Yes</li>
+                    <li><strong>Gender:</strong> Female</li>
+                    <li><strong>Height:</strong> 5'6" (168 cm)</li>
+                    <li><strong>Weight:</strong> 60 kg</li>
+                    <li><strong>Fitness Goal:</strong> Weight Loss</li>
+                    <li><strong>Medical Condition:</strong> None</li>
+                    <li><strong>Allergies:</strong> Nuts</li>
+                    <li><strong>Injuries:</strong> Knee Pain</li>
+                </ul>
+            </div>
+
+            <!-- Log Out Button -->
+            <div class="logout-section">
+                <a href="index.html">
+                    <button class="logout-button">Log Out</button>
+                </a>
+            </div>
+        </div>
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <div class="hours-activity-block">
+                <h3>Hours Activity</h3>
+                <div class="hours-info">
+                    <p><strong>8h</strong></p>
+                    <p>Weekly +1%</p>
+
+                </div>
+                <div class="chart">
+                    <div class="bar-container">
+                        <div class="bar" id="sunday"></div>
+                        <span class="label">S</span>
+                    </div>
+                    <div class="bar-container">
+                        <div class="bar" id="monday"></div>
+                        <span class="label">M</span>
+                    </div>
+                    <div class="bar-container">
+                        <div class="bar" id="tuesday"></div>
+                        <span class="label">T</span>
+                    </div>
+                    <div class="bar-container">
+                        <div class="bar" id="wednesday"></div>
+                        <span class="label">W</span>
+                    </div>
+                    <div class="bar-container">
+                        <div class="bar" id="thursday"></div>
+                        <span class="label">T</span>
+                    </div>
+                    <div class="bar-container">
+                        <div class="bar" id="friday"></div>
+                        <span class="label">F</span>
+                    </div>
+                    <div class="bar-container">
+                        <div class="bar" id="saturday"></div>
+                        <span class="label">S</span>
+                    </div>
+                </div>
+
+                <!-- streak calender -->
+                <div class="calendar-container">
+                    <div class="calendar-wrapper">
+                        <img src="assets/P13.jpg" alt="Left Image" class="calendar-image left-image">
+                        <div>
+                            <div class="calendar-header">
+                                November 2024
+                            </div>
+                            <div class="calendar">
+                                <div class="calendar-day">S</div>
+                                <div class="calendar-day">M</div>
+                                <div class="calendar-day">T</div>
+                                <div class="calendar-day">W</div>
+                                <div class="calendar-day">T</div>
+                                <div class="calendar-day">F</div>
+                                <div class="calendar-day">S</div>
+                                <!-- Example Dates -->
+                                <div class="calendar-date"></div> <!-- Blank for spacing -->
+                                <div class="calendar-date">1</div>
+                                <div class="calendar-date">2</div>
+                                <div class="calendar-date">3</div>
+                                <div class="calendar-date">4</div>
+                                <div class="calendar-date">5</div>
+                                <div class="calendar-date">6</div>
+                                <div class="calendar-date">7</div>
+                                <div class="calendar-date">8</div>
+                                <div class="calendar-date">9</div>
+                                <div class="calendar-date">10</div>
+                                <div class="calendar-date">11</div>
+                                <div class="calendar-date">12</div>
+                                <div class="calendar-date">13</div>
+                                <div class="calendar-date">14</div>
+                                <div class="calendar-date">15</div>
+                                <div class="calendar-date">16</div>
+                                <div class="calendar-date">17</div>
+                                <div class="calendar-date">18</div>
+                                <div class="calendar-date">19</div>
+                                <div class="calendar-date">20</div>
+                                <div class="calendar-date">21</div>
+                                <div class="calendar-date">22</div>
+                                <div class="calendar-date">23</div>
+                                <div class="calendar-date">24</div>
+                                <div class="calendar-date">25</div>
+                                <div class="calendar-date">26</div>
+                                <div class="calendar-date">27</div>
+                                <div class="calendar-date">28</div>
+                                <div class="calendar-date">29</div>
+                                <div class="calendar-date">30</div>
+                            </div>
+                        </div>
+                        <img src="assets/P14.jpg" alt="Right Image" class="calendar-image right-image">
+                    </div>
+                </div>
+
+
+                <!-- Yoga Routine Section -->
+                <div class="yoga-section">
+                    <h3>Yoga Routine for Today</h3>
+                    <div class="carousel">
+                        <button class="arrow left-arrow">←</button>
+                        <div class="carousel-items">
+                            <div class="card">
+                                <h4>Yoga Routine</h4>
+                                <p>5 times of Surya Namaskar, 10 minutes of Pranayama, 15 minutes of Meditation</p>
+                            </div>
+                            <div class="card">
+                                <h4>Rest Day</h4>
+                            </div>
+                            <div class="card">
+                                <h4>5 times of Surya Namaskar</h4>
+                                <p>10 minutes of Pranayama, 15 minutes of Meditation</p>
+                            </div>
+                            <div class="card">
+                                <h4>Rest Day</h4>
+                            </div>
+                        </div>
+                        <button class="arrow right-arrow">→</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>

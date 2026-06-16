@@ -1,0 +1,212 @@
+/* login page */
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex; /* Enable flexbox for the body */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Make the body take full viewport height */
+    background-color: #f4f4f4; /* Optional: Adjust background color */
+    background: linear-gradient(135deg, #DFF2EB, #7AB2D3); /* Gradient background */
+  font-family: 'Arial', sans-serif; 
+  }
+
+
+.login__container {
+    display: flex;
+  flex-direction: row;
+  width: 70%; /* Adjust width as needed */
+  max-width: 900px; /* Ensure responsiveness */
+  background: #fff; /* Background color for the container */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for depth */
+  border-radius: 20px; /* Optional: Rounded corners */
+  overflow: hidden;
+  }
+
+/* Login Card */
+.login__card {
+    flex: 1;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #fff, #f7f7f7);
+  }
+
+  .login__card h1 {
+    font-size: 2rem;
+    color: #4A628A;
+    margin-bottom: 1.5rem;
+  }
+
+.input__group {
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+.input__group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  .input__group input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .input__group input:focus {
+    border-color: #7AB2D3; /* Highlight border on focus */
+    box-shadow: 0 0 5px rgba(122, 178, 211, 0.5); /* Add subtle shadow */
+    outline: none;
+  }
+
+  .eye-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+
+
+.eye-icon i {
+  font-size: 1.2rem; /* Adjust icon size */
+  color: #555;
+}
+
+.eye-icon i:hover {
+  color: #ff477e; /* Change color on hover */
+}
+  
+  .checkbox__group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  .checkbox__group label {
+    margin: 0; /* Remove extra margin if any */
+    font-size: 0.9rem; /* Adjust font size for consistency */
+    color: #555; /* Optional: Text color for label */
+  }
+
+  .checkbox__group input {
+    margin-right: 0.5rem;
+  }
+  
+  .login__actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  
+  .btn {
+    display: block; /* Ensures the button takes its own line */
+  width: 100%; /* Make the button span the full width of the container */
+    padding: 0.8rem 1.5rem;
+    background-color: #3a86ff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .btn:hover {
+    background-color: #285adf;
+    transform: scale(1.05); /* Small zoom effect */
+  }
+  
+  .register__link a, .forgot__password {
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: #ff477e;
+    transition: color 0.3s ease;
+  }
+  
+  .register__link a:hover, .forgot__password:hover {
+    color: #ff6b98;
+  }
+
+  .forgot__password {
+    font-size: 0.9rem;
+    color: #ff006e;
+    text-decoration: none;
+    margin-left: 8rem;
+  }
+  
+  .register__link {
+    font-size: 0.9rem;
+    color: #777;
+  }
+  
+  .register__link a {
+    color: #3a86ff;
+    text-decoration: none;
+  }
+  
+  /* Image Section */
+  .login__image {
+    flex: 1;
+    background-color: #ffe4e1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .login__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .signup__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .left-form {
+    flex: 1; /* Ensure left section takes proportional space */
+    padding: 2rem;
+  }
+  
+  .right-image {
+    flex: 1; /* Ensure right section takes proportional space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e8f0fe; /* Adjust background color for image side */
+  }
+
+  .right-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)); /* Gradient overlay */
+    z-index: 1; /* Overlay above the image */
+  }
+  
+  .right-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    position: relative;
+  z-index: 0;
+  }
