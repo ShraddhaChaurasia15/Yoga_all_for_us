@@ -69,7 +69,7 @@ ctx.clearRect(0,0,canvas.width,canvas.height);
 ctx.drawImage(results.image,0,0,canvas.width,canvas.height);
 
 if(results.poseLandmarks){
-
+feedback.innerHTML = "✅ Body Detected";
 ctx.shadowColor = "#5FFFCB";
 ctx.shadowBlur = 10;
 
@@ -84,6 +84,14 @@ drawConnectors(
 );
 const angles =
 getJointAngles(results.poseLandmarks);
+const currentPose = "tree";
+
+const expected = poseAngles[currentPose];
+const accuracy =
+calculateAccuracy(
+angles,
+expected
+);
 updateJointCard(
 "leftElbow",
 angles.leftElbow
@@ -130,14 +138,6 @@ ctx.shadowBlur = 0;
 
 
 
-drawLandmarks(
-    ctx,
-    results.poseLandmarks,
-    {
-        color:"#ffffff",
-        radius:2
-    }
-);
 
 }
 else{
@@ -152,7 +152,7 @@ function updateJointCard(id,angle){
 
 const element=document.getElementById(id);
 
-element.innerHTML=angle+"°";
+element.textContent = angle + "°";
 
 if(angle>160){
 
@@ -167,6 +167,29 @@ element.style.color="#ff9800";
 else{
 
 element.style.color="#ff3d3d";
+function calculateAccuracy(current, expected){
+
+let total = 0;
+
+let joints = 0;
+
+for(const joint in expected){
+
+const difference =
+Math.abs(current[joint]-expected[joint]);
+
+const jointScore =
+Math.max(0,100-difference);
+
+total += jointScore;
+
+joints++;
+
+}
+
+return Math.round(total/joints);
+
+}
 
 }
 
