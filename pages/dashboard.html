@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard</title>
+
+    <link rel="stylesheet"
+          href="dashboard.css">
+
+</head>
+
+<body>
+
+<div class="page">
+
+<header class="navbar">
+
+    <div class="logo">
+
+        <img src="assets/logo.png">
+
+        <h2>Yoga All For Us</h2>
+
+    </div>
+
+    <nav>
+
+        <a href="library.html">Library</a>
+
+        <a class="active">Dashboard</a>
+
+        <a href="practice.html">Practice</a>
+
+        <a href="#">Contact</a>
+
+    </nav>
+
+    <div class="profile">
+
+        <span>bhoomi@gmail.com</span>
+
+        <button>
+
+            Sign out
+
+        </button>
+
+    </div>
+
+</header>
+<main class="dashboard">
+
+    <div class="hero-top">
+
+        <div>
+
+            <p class="welcome">
+
+                Namaste, Bhoomi 👋
+
+            </p>
+
+            <h1>
+
+                Your Practice Today
+
+            </h1>
+
+        </div>
+
+        <button class="preferences">
+
+            ⚙ Preferences
+
+        </button>
+
+    </div>
+
+
+    <div class="stats">
+
+        <div class="card streak">
+
+            <span>CURRENT STREAK</span>
+
+            <h2>0d</h2>
+
+        </div>
+
+        <div class="card">
+
+            <span>LONGEST STREAK</span>
+
+            <h2>1d</h2>
+
+        </div>
+
+        <div class="card">
+
+            <span>SESSIONS</span>
+
+            <h2>1</h2>
+
+        </div>
+
+        <div class="card">
+
+            <span>AVG ACCURACY</span>
+
+            <h2>33%</h2>
+
+        </div>
+
+    </div>
+    <section class="heatmap-section">
+
+    <div class="heatmap-header">
+
+        <div>
+
+            <h2>Consistency</h2>
+
+            <p>Every day you practice makes you stronger.</p>
+
+        </div>
+
+        <span>2 min today</span>
+
+    </div>
+
+    <div class="heatmap" id="heatmap"></div>
+
+    <div class="legend">
+
+        Less
+
+        <span></span>
+
+        <span class="l1"></span>
+
+        <span class="l2"></span>
+
+        <span class="l3"></span>
+
+        More
+
+    </div>
+
+</section>
+<section class="recommend-section">
+
+    <div class="recommend-header">
+
+        <div>
+
+            <h2>✨ Recommended For You</h2>
+
+            <p>Tuned according to your profile and progress.</p>
+
+        </div>
+
+    </div>
+
+    <div id="recommendContainer" class="recommend-grid">
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- Everything else comes later -->
+
+
+</div>
+<script src="poseData.js"></script>
+<script src="dashboard.js"></script>
+
+</body>
+
+</html>

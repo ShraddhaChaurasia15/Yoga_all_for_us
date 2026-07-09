@@ -34,18 +34,29 @@ if (loginForm) {
 
       const data = await response.json();
 
-      if (response.ok) {
+     if(response.ok){
 
     localStorage.setItem(
-        "user",
-        JSON.stringify(data.user)
+
+        "token",
+
+        data.token
+
     );
 
-    alert('Login successful!');
+    localStorage.setItem(
 
-    window.location.href = 'profile.html';
- // Replace 'dashboard.html' with your page
-      } else {
+        "user",
+
+        JSON.stringify(data.user)
+
+    );
+
+    alert("Welcome to Yoga : All For Us 🌿");
+
+    window.location.href="library.html";
+
+}else {
         // Handle login error
         alert(data.msg || 'Login failed. Please try again.');
       }
@@ -86,11 +97,16 @@ if (signupForm) {
       const data = await response.json();
 
       if (response.ok) {
-        // Signup successful
-        alert('Signup successful! You can now log in.');
-        // Redirect to the login page
-        window.location.href = 'login.html';
-      } else {
+
+    localStorage.setItem("token", data.token);
+
+    localStorage.setItem("user", JSON.stringify(data.user));
+
+    alert("Welcome to Yoga : All For Us 🌿");
+
+    window.location.href = "library.html";
+
+} else {
         // Handle signup errors
         alert(data.msg || 'Signup failed. Please try again.');
       }

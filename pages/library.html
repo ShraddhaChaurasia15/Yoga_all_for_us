@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Yoga Library</title>
+
+    <link rel="stylesheet" href="library.css">
+
+</head>
+
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+
+            <img src="assets/logo.png" alt="logo">
+
+            <h2>YOGA : ALL FOR US</h2>
+
+        </div>
+
+        <nav>
+
+            <a href="index.html">Home</a>
+
+            <a href="library.html" class="active">Yoga Library</a>
+
+            <a href="#">Contact</a>
+
+            <a href="login.html">Login</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+        <div class="hero-text">
+
+            <h1>Yoga Library</h1>
+
+            <p>
+
+                Explore yoga poses based on your level.
+
+                Learn the correct posture and practice
+
+                with AI-powered posture correction.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SEARCH ================= -->
+
+    <section class="search-section">
+
+        <input
+            type="text"
+            id="searchBox"
+            placeholder="🔍 Search Yoga Pose">
+
+        <select id="difficultyFilter">
+
+            <option value="All">
+
+                All Levels
+
+            </option>
+
+            <option>
+
+                Beginner
+
+            </option>
+
+            <option>
+
+                Intermediate
+
+            </option>
+
+            <option>
+
+                Advanced
+
+            </option>
+
+        </select>
+
+    </section>
+
+
+    <!-- ================= BEGINNER ================= -->
+
+   <section class="library-section">
+
+    <div class="section-header">
+
+        <div>
+
+            <h2>⭐ Beginner Poses</h2>
+
+            <p>Perfect for people starting yoga.</p>
+
+        </div>
+
+        <button class="view-all">
+            View All →
+        </button>
+
+    </div>
+
+    <div class="slider-wrapper">
+
+        <button class="scroll-btn left"
+            onclick="scrollLeft('beginnerContainer')">
+            ❮
+        </button>
+
+        <div
+            class="pose-container"
+            id="beginnerContainer">
+
+        </div>
+
+        <button class="scroll-btn right"
+            onclick="scrollRight('beginnerContainer')">
+            ❯
+        </button>
+
+    </div>
+
+</section>
+
+
+    <!-- ================= INTERMEDIATE ================= -->
+
+    <section>
+
+        <div class="section-title">
+
+            <h2>⭐ Intermediate Poses</h2>
+
+            <p>
+
+                Improve your flexibility and balance.
+
+            </p>
+
+        </div>
+
+        <div
+            class="pose-container"
+            id="intermediateContainer">
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ADVANCED ================= -->
+
+    <section>
+
+        <div class="section-title">
+
+            <h2>⭐ Advanced Poses</h2>
+
+            <p>
+
+                Challenge yourself with advanced yoga.
+
+            </p>
+
+        </div>
+
+        <div
+            class="pose-container"
+            id="advancedContainer">
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+
+            © 2026 Yoga : All For Us
+
+        </p>
+
+    </footer>
+
+
+    <script src="poseData.js"></script>
+
+    <script src="library.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Yoga Practice</title>
+
+<link rel="stylesheet" href="practice.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- =========================
+NAVBAR
+========================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+
+        <img src="assets/logo.png">
+
+        <h2>YOGA : ALL FOR US</h2>
+
+    </div>
+
+    <nav>
+
+        <a href="library.html">Library</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a class="active" href="#">Practice</a>
+        <a href="#">Contact</a>
+
+    </nav>
+
+    <div class="user-area">
+
+        <span id="userEmail"></span>
+
+        <button id="logoutBtn">
+
+            Sign Out
+
+        </button>
+
+    </div>
+
+</header>
+
+<!-- =========================
+MAIN
+========================= -->
+
+<section class="practice-page">
+
+<div class="practice-grid">
+
+<!-- LEFT -->
+
+<div class="left-side">
+
+<div class="pose-header">
+
+<span class="level-badge" id="poseLevel">
+
+Beginner
+
+</span>
+
+<h1 id="poseName">
+
+Warrior II
+
+</h1>
+
+<h3 id="poseSanskrit">
+
+Virabhadrasana II
+
+</h3>
+
+</div>
+
+<!-- CAMERA -->
+
+<div class="camera-card">
+
+    <div class="camera-header">
+
+        <span id="liveStatus">
+            🟢 Live • <span id="timer">0</span>s
+        </span>
+
+        <span id="accuracy">
+            0%
+        </span>
+
+    </div>
+
+    <div class="camera-wrapper">
+
+        <video
+            id="video"
+            autoplay
+            playsinline>
+        </video>
+
+        <canvas id="outputCanvas"></canvas>
+
+        <div id="feedback" class="feedback">
+            Waiting for camera...
+        </div>
+
+    </div>
+
+</div>
+
+<!-- BUTTON -->
+
+<button
+id="startBtn"
+class="start-btn">
+
+📷 Start Camera
+
+</button>
+<button
+id="finishBtn"
+class="finish-btn">
+
+✔ Finish & Save
+
+</button>
+
+<!-- JOINTS -->
+
+<div class="joint-section">
+
+<h2>
+
+LIVE JOINT ANGLES
+
+</h2>
+
+<div
+id="jointGrid"
+class="joint-grid">
+
+<div class="joint-card">
+
+<p>Left Elbow</p>
+
+<h3 id="leftElbow">
+
+--
+
+</h3>
+
+</div>
+
+<div class="joint-card">
+
+<p>Right Elbow</p>
+
+<h3 id="rightElbow">
+
+--
+
+</h3>
+
+</div>
+
+<div class="joint-card">
+
+<p>Left Shoulder</p>
+
+<h3 id="leftShoulder">
+
+--
+
+</h3>
+
+</div>
+
+<div class="joint-card">
+
+<p>Right Shoulder</p>
+
+<h3 id="rightShoulder">
+
+--
+
+</h3>
+
+</div>
+
+<div class="joint-card">
+
+<p>Left Hip</p>
+
+<h3 id="leftHip">
+
+--
+
+</h3>
+
+</div>
+
+<div class="joint-card">
+
+<p>Right Hip</p>
+
+<h3 id="rightHip">
+
+--
+
+</h3>
+
+</div>
+
+<div class="joint-card">
+
+<p>Left Knee</p>
+
+<h3 id="leftKnee">
+
+--
+
+</h3>
+
+</div>
+
+<div class="joint-card">
+
+<p>Right Knee</p>
+
+<h3 id="rightKnee">
+
+--
+
+</h3>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+</div>
+
+<!-- RIGHT -->
+
+<div class="right-side">
+
+<div class="info-card">
+
+<h2>
+
+Cues
+
+</h2>
+
+<ol id="cueList">
+
+<li>Keep your spine straight</li>
+
+<li>Engage your core</li>
+
+<li>Breathe normally</li>
+
+</ol>
+
+</div>
+
+<div class="info-card">
+
+<h2>
+
+Setup Tips
+
+</h2>
+
+<ul>
+
+<li>Keep your whole body visible.</li>
+
+<li>Good lighting improves accuracy.</li>
+
+<li>Stand 2 meters away.</li>
+
+<li>Face the camera directly.</li>
+
+</ul>
+
+</div>
+
+<div class="score-card">
+
+<h2>
+
+Current Score
+
+</h2>
+
+<div id="scoreCircle">
+
+0%
+
+</div>
+
+<p>
+
+Maintain the pose for best accuracy.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+MEDIAPIPE
+========================= -->
+
+<script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@mediapipe/pose/pose.js"></script>
+
+<script src="poseData.js"></script>
+<script src="poseEngine.js"></script>
+
+<script src="practice.js"></script>
+
+</body>
+
+</html>
