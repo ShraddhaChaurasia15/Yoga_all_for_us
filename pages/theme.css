@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800&display=swap");
+
+:root {
+  --primary-color: #7AB2D3;
+  --primary-color-dark: #4F86A7;
+  --primary-color-light: #A5D2EB;
+  --text-dark: #1e293b;
+  --text-light: #64748b;
+  --bg-light: #f5f8fc;
+  --white: #ffffff;
+  --max-width: 1200px;
+}
+
+/* Apply Work Sans globally */
+body, input, select, button, textarea {
+  font-family: "Work Sans", sans-serif !important;
+}
+
+/* Universal Navbar Design - Strongly Enforced */
+.main-navbar {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  height: 80px !important;
+  background-color: #ffffff !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05) !important;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 9999 !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 0 80px !important; /* Expand padding matching library */
+  box-sizing: border-box !important;
+  border-bottom: 1px solid #f1f5f9 !important;
+}
+
+.nav-logo {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  cursor: pointer !important;
+}
+
+.nav-logo img {
+  width: 44px !important;
+  height: 44px !important;
+  object-fit: contain !important;
+}
+
+.nav-logo span {
+  font-size: 1.2rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.5px !important;
+  color: #1e293b !important;
+  text-transform: uppercase !important;
+}
+
+.nav-links {
+  list-style: none !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 2.2rem !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.nav-links li {
+  display: flex !important;
+  align-items: center !important;
+}
+
+.nav-links li a {
+  color: #64748b !important;
+  font-weight: 500 !important;
+  font-size: 1rem !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease !important;
+  padding: 8px 4px !important;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: #7AB2D3 !important; /* Soft blue */
+}
+
+/* User Area Separated on Far Right */
+.nav-user-area {
+  display: flex !important;
+  align-items: center !important;
+  gap: 20px !important;
+}
+
+.nav-user-email {
+  font-weight: 500 !important;
+  font-size: 0.95rem !important;
+  color: #64748b !important;
+}
+
+.nav-signup-link {
+  text-decoration: none !important;
+  color: #64748b !important;
+  font-weight: 500 !important;
+  font-size: 1rem !important;
+  transition: color 0.2s ease !important;
+  padding: 8px 4px !important;
+}
+
+.nav-signup-link:hover {
+  color: #7AB2D3 !important;
+}
+
+/* Action Button Style matching landing page primary button */
+.nav-btn {
+  padding: 0.45rem 1.1rem !important;
+  font-size: 0.85rem !important;
+  font-weight: 600 !important;
+  color: #ffffff !important;
+  background-color: #7AB2D3 !important;
+  border-radius: 5rem !important;
+  border: none !important;
+  cursor: pointer !important;
+  box-shadow: 0 4px 6px rgba(122, 178, 211, 0.2) !important;
+  transition: all 0.3s ease !important;
+}
+
+.nav-btn:hover {
+  background-color: #A5D2EB !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 6px 12px rgba(122, 178, 211, 0.3) !important;
+}
+
+.nav-btn:active {
+  transform: translateY(0) !important;
+}

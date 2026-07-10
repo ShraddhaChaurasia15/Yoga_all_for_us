@@ -12,6 +12,8 @@
 
     <link rel="stylesheet"
           href="dashboard.css">
+    <link rel="stylesheet"
+          href="theme.css">
 
 </head>
 
@@ -19,41 +21,16 @@
 
 <div class="page">
 
-<header class="navbar">
-
-    <div class="logo">
-
-        <img src="assets/logo.png">
-
-        <h2>Yoga All For Us</h2>
-
+<nav class="main-navbar">
+    <div class="nav-logo" onclick="window.location.href='index.html'">
+        <img src="assets/logo.png" alt="logo">
+        <span>YOGA : ALL FOR US</span>
     </div>
-
-    <nav>
-
-        <a href="library.html">Library</a>
-
-        <a class="active">Dashboard</a>
-
-        <a href="practice.html">Practice</a>
-
-        <a href="#">Contact</a>
-
-    </nav>
-
-    <div class="profile">
-
-        <span>bhoomi@gmail.com</span>
-
-        <button>
-
-            Sign out
-
-        </button>
-
+    <ul class="nav-links" id="navLinks">
+    </ul>
+    <div class="nav-user-area" id="navUserArea">
     </div>
-
-</header>
+</nav>
 <main class="dashboard">
 
     <div class="hero-top">
@@ -85,13 +62,10 @@
 
     <div class="stats">
 
-        <div class="card streak">
-
-            <span>CURRENT STREAK</span>
-
-            <h2>0d</h2>
-
-        </div>
+       <div class="card">
+    <span>CURRENT STREAK</span>
+    <h2 id="currentStreak">0 Days</h2>
+</div>
 
         <div class="card">
 
@@ -102,20 +76,18 @@
         </div>
 
         <div class="card">
+    <span>SESSIONS</span>
+    <h2 id="totalSessions">0</h2>
+</div>
 
-            <span>SESSIONS</span>
-
-            <h2>1</h2>
-
-        </div>
-
-        <div class="card">
-
-            <span>AVG ACCURACY</span>
-
-            <h2>33%</h2>
-
-        </div>
+      <div class="card">
+    <span>AVG ACCURACY</span>
+    <h2 id="avgAccuracy">0%</h2>
+</div>  
+<div class="card">
+    <span>BEST SCORE</span>
+    <h2 id="bestAccuracy">0%</h2>
+</div>
 
     </div>
     <section class="heatmap-section">
@@ -176,11 +148,58 @@
 </main>
 
 
-<!-- Everything else comes later -->
-
+<!-- Preferences Modal -->
+<div class="modal-overlay" id="preferencesModal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3>⚙ Preferences</h3>
+            <button class="close-btn" id="closeModalBtn">&times;</button>
+        </div>
+        <form id="preferencesForm">
+            <div class="form-group">
+                <label for="prefAge">Age</label>
+                <input type="number" id="prefAge" placeholder="Enter age" required>
+            </div>
+            <div class="form-group">
+                <label for="prefGender">Gender</label>
+                <select id="prefGender">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="prefHeight">Height (cm)</label>
+                <input type="number" id="prefHeight" placeholder="Height in cm" required>
+            </div>
+            <div class="form-group">
+                <label for="prefWeight">Weight (kg)</label>
+                <input type="number" id="prefWeight" placeholder="Weight in kg" required>
+            </div>
+            <div class="form-group">
+                <label for="prefGoal">Recommendation Goal</label>
+                <select id="prefGoal">
+                    <option value="Weight Loss">Weight Loss</option>
+                    <option value="Weight Gain">Weight Gain</option>
+                    <option value="Flexibility">Flexibility</option>
+                    <option value="Stress Relief">Stress Relief</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="prefInjuries">Injuries (if any)</label>
+                <input type="text" id="prefInjuries" placeholder="e.g. Knee pain, shoulder stiff">
+            </div>
+            <div class="form-group">
+                <label for="prefMedical">Medical Conditions</label>
+                <input type="text" id="prefMedical" placeholder="e.g. Asthma, High Blood Pressure">
+            </div>
+            <button type="submit" class="save-preferences-btn">Save Settings</button>
+        </form>
+    </div>
+</div>
 
 </div>
 <script src="poseData.js"></script>
+<script src="theme.js"></script>
 <script src="dashboard.js"></script>
 
 </body>

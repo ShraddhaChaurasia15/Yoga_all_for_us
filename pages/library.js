@@ -1,3 +1,10 @@
+// Authenticate check
+const user = JSON.parse(localStorage.getItem("user"));
+if (!user) {
+    alert("Please login first.");
+    window.location.href = "login.html";
+}
+
 const beginnerContainer =
 document.getElementById("beginnerContainer");
 
@@ -177,6 +184,14 @@ function openPose(id)
 
     window.location.href =
     `poseDetails.html?id=${id}`;
+
+}
+
+function startPractice(id)
+{
+
+    window.location.href =
+    `practice.html?id=${id}`;
 
 }
 function scrollLeft(id){

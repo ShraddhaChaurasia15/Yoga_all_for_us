@@ -310,28 +310,27 @@ top:0;
 
 }
 
-
 .feedback{
 
 position:absolute;
 
-left:25px;
+bottom:22px;
 
-right:25px;
+left:22px;
 
-bottom:20px;
+right:22px;
 
-padding:18px;
+background:rgba(30,30,30,.82);
+
+backdrop-filter:blur(12px);
+
+padding:14px 18px;
 
 border-radius:18px;
 
-background:rgba(30,30,30,.72);
-
-backdrop-filter:blur(10px);
-
 color:white;
 
-font-size:19px;
+font-size:17px;
 
 font-weight:500;
 
@@ -830,27 +829,5 @@ display:flex;
 justify-content:space-between;
 
 z-index:10;
-
-}
-#liveStatus{
-
-background:rgba(35,35,35,.82);
-
-color:white;
-
-padding:10px 18px;
-
-border-radius:30px;
-
-font-size:16px;
-
-}
-#accuracy{
-
-font-size:34px;
-
-font-weight:bold;
-
-color:#ff4d4d;
 
 }

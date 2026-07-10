@@ -9,6 +9,7 @@
 <title>Yoga Practice</title>
 
 <link rel="stylesheet" href="practice.css">
+<link rel="stylesheet" href="theme.css">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
@@ -16,42 +17,20 @@
 
 <body>
 
-<!-- =========================
-NAVBAR
-========================= -->
+<div class="page-container">
 
-<header class="navbar">
+    <!-- NAVBAR -->
 
-    <div class="logo">
-
-        <img src="assets/logo.png">
-
-        <h2>YOGA : ALL FOR US</h2>
-
-    </div>
-
-    <nav>
-
-        <a href="library.html">Library</a>
-        <a href="dashboard.html">Dashboard</a>
-        <a class="active" href="#">Practice</a>
-        <a href="#">Contact</a>
-
+    <nav class="main-navbar">
+        <div class="nav-logo" onclick="window.location.href='index.html'">
+            <img src="assets/logo.png" alt="logo">
+            <span>YOGA : ALL FOR US</span>
+        </div>
+        <ul class="nav-links" id="navLinks">
+        </ul>
+        <div class="nav-user-area" id="navUserArea">
+        </div>
     </nav>
-
-    <div class="user-area">
-
-        <span id="userEmail"></span>
-
-        <button id="logoutBtn">
-
-            Sign Out
-
-        </button>
-
-    </div>
-
-</header>
 
 <!-- =========================
 MAIN
@@ -94,12 +73,18 @@ Virabhadrasana II
     <div class="camera-header">
 
         <span id="liveStatus">
-            🟢 Live • <span id="timer">0</span>s
-        </span>
+    🟢 Ready
+</span>
 
-        <span id="accuracy">
-            0%
-        </span>
+<span id="timer">
+    00:00
+</span>
+
+      <div id="accuracy" class="accuracy-badge">
+
+0%
+
+</div>
 
     </div>
 
@@ -114,8 +99,10 @@ Virabhadrasana II
         <canvas id="outputCanvas"></canvas>
 
         <div id="feedback" class="feedback">
-            Waiting for camera...
-        </div>
+
+📷 Click "Start Camera"
+
+</div>
 
     </div>
 
@@ -132,7 +119,8 @@ class="start-btn">
 </button>
 <button
 id="finishBtn"
-class="finish-btn">
+class="finish-btn"
+disabled>
 
 ✔ Finish & Save
 
@@ -334,19 +322,10 @@ Maintain the pose for best accuracy.
 MEDIAPIPE
 ========================= -->
 
-<script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/@mediapipe/pose/pose.js"></script>
 
 <script src="poseData.js"></script>
-<script src="poseAngles.js"></script>
-<script src="poseEngine.js"></script>
-
-<script src="practice.js"></script>
+<script src="theme.js"></script>
+<script type="module" src="practice.js"></script>
 
 </body>
 

@@ -12,22 +12,23 @@ content="width=device-width, initial-scale=1.0">
 
 <link rel="stylesheet"
 href="poseDetails.css">
+<link rel="stylesheet"
+href="theme.css">
 
 </head>
 
 <body>
 
-<header class="navbar">
-
-<h2>🧘 Yoga : All For Us</h2>
-
-<a href="library.html">
-
-← Back to Library
-
-</a>
-
-</header>
+<nav class="main-navbar">
+    <div class="nav-logo" onclick="window.location.href='index.html'">
+        <img src="assets/logo.png" alt="logo">
+        <span>YOGA : ALL FOR US</span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+    </ul>
+    <div class="nav-user-area" id="navUserArea">
+    </div>
+</nav>
 
 
 <section class="details">
@@ -57,7 +58,7 @@ id="poseImage">
 
 <button id="practiceBtn">
 
-▶ Start AI Practice
+▶ Practice
 
 </button>
 
@@ -103,7 +104,7 @@ id="poseImage">
 </section>
 
 <script src="poseData.js"></script>
-
+<script src="theme.js"></script>
 <script src="poseDetails.js"></script>
 
 </body>

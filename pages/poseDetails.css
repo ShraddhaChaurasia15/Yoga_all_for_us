@@ -20,28 +20,82 @@ body{
     color:#222;
 }
 
-/* ==========================
-   NAVBAR
-========================== */
-
 .navbar{
-    height:80px;
-    background:white;
+    height:90px;
+    background:#fff;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:0 80px;
-    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    padding:0 60px;
+    box-shadow:0 4px 18px rgba(0,0,0,.08);
+    position:sticky;
+    top:0;
+    z-index:999;
 }
 
-.navbar h2{
+.logo{
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+.logo img{
+    width:52px;
+}
+
+.logo h2{
+    font-size:32px;
+    font-weight:800;
     color:#0a5c82;
 }
 
-.navbar a{
+nav{
+    display:flex;
+    gap:45px;
+}
+
+nav a{
+    font-size:18px;
+    font-weight:500;
+    transition:.3s;
     text-decoration:none;
-    color:#0a5c82;
+    color:#555;
+}
+
+nav a:hover{
+    color:#0a84bf;
+}
+
+.active{
+    color:#0a84bf;
+    font-weight:700;
+}
+
+.user-area{
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
+
+.user-area span {
+    font-weight: 500;
+    font-size: 15px;
+    color: #555;
+}
+
+#logoutBtn{
+    border:none;
+    padding:10px 20px;
+    background:#e11d48;
+    color:#fff;
     font-weight:600;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#logoutBtn:hover{
+    background:#be123c;
 }
 
 /* ==========================

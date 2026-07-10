@@ -11,6 +11,7 @@
     <title>Yoga Library</title>
 
     <link rel="stylesheet" href="library.css">
+    <link rel="stylesheet" href="theme.css">
 
 </head>
 
@@ -19,29 +20,16 @@
 
     <!-- ================= NAVBAR ================= -->
 
-    <header class="navbar">
-
-        <div class="logo">
-
+    <nav class="main-navbar">
+        <div class="nav-logo" onclick="window.location.href='index.html'">
             <img src="assets/logo.png" alt="logo">
-
-            <h2>YOGA : ALL FOR US</h2>
-
+            <span>YOGA : ALL FOR US</span>
         </div>
-
-        <nav>
-
-            <a href="index.html">Home</a>
-
-            <a href="library.html" class="active">Yoga Library</a>
-
-            <a href="#">Contact</a>
-
-            <a href="login.html">Login</a>
-
-        </nav>
-
-    </header>
+        <ul class="nav-links" id="navLinks">
+        </ul>
+        <div class="nav-user-area" id="navUserArea">
+        </div>
+    </nav>
 
 
     <!-- ================= HERO ================= -->
@@ -214,7 +202,7 @@
 
 
     <script src="poseData.js"></script>
-
+    <script src="theme.js"></script>
     <script src="library.js"></script>
 
 </body>

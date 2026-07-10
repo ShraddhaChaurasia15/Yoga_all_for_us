@@ -105,6 +105,15 @@ document.querySelector('.signup-btn a')?.addEventListener('click', function (e) 
   // main.js (Frontend)
 
 document.addEventListener("DOMContentLoaded", () => {
+  // Setup Dynamic Header Button based on login state
+  const user = JSON.parse(localStorage.getItem("user"));
+  const actionLink = document.getElementById("headerActionLink");
+  const actionBtn = document.getElementById("headerActionBtn");
+  if (user && actionLink && actionBtn) {
+    actionLink.href = "dashboard.html";
+    actionBtn.textContent = "Go to Dashboard";
+  }
+
   // Handle form submission (sign-up)
   const signupForm = document.querySelector('.signup-form');
   if (signupForm) {
