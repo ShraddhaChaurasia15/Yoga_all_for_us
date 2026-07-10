@@ -26,7 +26,7 @@ const writeJSONDb = (data) => {
   fs.writeFileSync(dbPath, JSON.stringify(data, null, 2));
 };
 
-// Sign Up Route
+// User Signup
 router.post('/signup', async (req, res) => {
   console.log('Request received at /signup:', req.body);
   const { name, email, password } = req.body;
@@ -94,7 +94,7 @@ router.post('/signup', async (req, res) => {
   }
 });
 
-// Login Route
+// User Login
 router.post('/login', async (req, res) => {
   const { email, password } = req.body;
 
@@ -129,7 +129,7 @@ router.post('/login', async (req, res) => {
   }
 });
 
-// Update User Profile
+// Update Profile
 router.put('/profile/:id', async (req, res) => {
   try {
     if (global.dbType === 'json') {
@@ -155,7 +155,7 @@ router.put('/profile/:id', async (req, res) => {
   }
 });
 
-// Get User Profile Route
+// Get Profile
 router.get('/profile/:id', async (req, res) => {
   try {
     if (global.dbType === 'json') {
