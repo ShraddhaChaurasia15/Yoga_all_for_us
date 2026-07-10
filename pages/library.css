@@ -328,7 +328,9 @@ footer{
 
 .pose-card{
 
-    width:100%;
+    min-width:260px;
+
+    max-width:260px;
 
     background:white;
 
