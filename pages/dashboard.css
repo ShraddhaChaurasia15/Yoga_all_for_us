@@ -193,7 +193,7 @@ cursor:pointer;
 
 display:grid;
 
-grid-template-columns:repeat(4,1fr);
+grid-template-columns:repeat(5,1fr);
 
 gap:25px;
 
@@ -660,3 +660,61 @@ background:#0a5c82;
 .save-preferences-btn:hover {
     background: #074765;
 }
+
+/* Responsive Dashboard */
+.heatmap-container {
+    overflow-x: auto;
+    width: 100%;
+    margin: 25px 0;
+}
+
+.heatmap-container .heatmap {
+    margin: 0;
+    min-width: 780px; /* Prevent shrinking below this so it doesn't wrap or overlap */
+}
+
+@media (max-width: 1200px) {
+    .stats {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .hero-top h1 {
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 992px) {
+    .recommend-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .hero-top {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+    .hero-top h1 {
+        font-size: 36px;
+    }
+    .welcome {
+        font-size: 20px;
+    }
+    .preferences {
+        align-self: flex-start;
+        padding: 10px 24px;
+        font-size: 16px;
+    }
+    .recommend-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .stats {
+        grid-template-columns: 1fr;
+    }
+}

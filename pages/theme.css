@@ -133,3 +133,29 @@ body, input, select, button, textarea {
 .nav-btn:active {
   transform: translateY(0) !important;
 }
+
+/* Responsive Navbar */
+@media (max-width: 992px) {
+  .main-navbar {
+    padding: 0 30px !important;
+    height: 70px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-navbar {
+    padding: 15px 20px !important;
+    flex-direction: column !important;
+    height: auto !important;
+    gap: 15px !important;
+  }
+  .nav-links {
+    gap: 1.2rem !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+  }
+  .nav-user-area {
+    gap: 15px !important;
+  }
+}
+

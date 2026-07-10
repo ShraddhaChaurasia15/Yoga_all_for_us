@@ -831,3 +831,21 @@ justify-content:space-between;
 z-index:10;
 
 }
+
+/* Responsive Practice */
+@media (max-width: 992px) {
+    .practice-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+@media (max-width: 600px) {
+    .joint-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    .practice-page {
+        padding: 15px 15px !important;
+    }
+    .pose-header h1 {
+        font-size: 32px !important;
+    }
+}
